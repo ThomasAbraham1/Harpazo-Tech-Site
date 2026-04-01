@@ -28,7 +28,7 @@ const ServiceCard = ({
       viewport={{ once: true, margin: '-60px' }}
       transition={{ duration: 0.6, delay, ease: 'easeOut' }}
       // whileHover={{ y: -6, transition: { duration: 0.25 } }}
-      className={`group relative flex flex-col p-8 rounded-2xl bg-white/5 backdrop-blur-md border ${isFeatured ? 'border-white/40 shadow-[0_0_30px_rgba(42,98,154,0.8)] z-10' : 'border-white/10 z-0'
+      className={`group relative flex flex-col p-8 rounded-2xl bg-none/5 backdrop-blur-md border ${isFeatured ? 'border-secondary-blue/100 shadow-[0_0_60px_rgba(42,98,154,1)] z-10' : 'border-white/10 z-0'
         } isolate overflow-visible`}
     >
       {/* Subtle top accent bar — animated on hover */}
