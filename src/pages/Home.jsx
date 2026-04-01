@@ -1,14 +1,21 @@
 import React from 'react';
 import Header from '../components/layout/Header';
 import Hero from '../components/sections/Hero';
+import Services from '../components/sections/Services';
+import StatBar from '../components/sections/StatBar';
+import SmoothScroll from '../components/layout/SmoothScroll';
 
 const Home = () => {
   return (
-    <main className="min-h-screen bg-white">
-      <Header />
-      <Hero />
-      {/* Future sections will go here */}
-    </main>
+    <SmoothScroll>
+      <main className="min-h-screen bg-white">
+        <Header />
+        <Hero />
+        <StatBar />
+        <Services />
+        {/* Future sections: Featured Work, Contact */}
+      </main>
+    </SmoothScroll>
   );
 };
 
