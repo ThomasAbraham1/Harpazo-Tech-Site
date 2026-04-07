@@ -11,3 +11,32 @@
     @apply font-heading font-bold text-primary-blue tracking-tight;
   }
 }
+
+@layer components {
+  .btn-gradient-outline {
+    position: relative;
+    background: transparent;
+    z-index: 1;
+  }
+
+  .btn-gradient-outline::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    padding: 1px; /* Border weight */
+    border-radius: inherit;
+    background: linear-gradient(to bottom right, #94a3b8, #003285);
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    mask-composite: exclude;
+    z-index: -1;
+    pointer-events: none;
+    transition: opacity 0.2s ease;
+  }
+
+  .btn-gradient-outline:hover::before {
+    opacity: 0.8;
+  }
+
+}

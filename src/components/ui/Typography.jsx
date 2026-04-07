@@ -37,9 +37,9 @@ export const Text = ({
   className = '',
   ...props
 }) => {
-  const baseStyles = 'font-body text-primary-blue leading-relaxed';
+  const baseStyles = 'font-body font-light text-primary-blue leading-relaxed';
   const sizeStyles = {
-    xs: 'text-xs',
+    xs: 'text-[8px]',
     sm: 'text-sm',
     base: 'text-base',
     lg: 'text-lg',
@@ -47,7 +47,7 @@ export const Text = ({
   };
 
   const colorStyle = subtle ? 'opacity-70' : '';
-  const classes = `${baseStyles} ${sizeStyles[size]} ${colorStyle} ${className}`;
+  const classes = `${baseStyles} ${sizeStyles[size]} ${colorStyle} ${className} tracking-widest`;
 
   return (
     <p className={classes} {...props}>

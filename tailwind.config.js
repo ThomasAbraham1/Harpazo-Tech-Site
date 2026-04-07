@@ -10,6 +10,7 @@ export default {
         'secondary-blue': '#2A629A',
         'accent-orange': '#FF7F3E',
         'canvas-yellow': '#FFDA78',
+        'darker': '#020617',
       },
       fontFamily: {
         heading: ['"Plus Jakarta Sans"', 'sans-serif'],

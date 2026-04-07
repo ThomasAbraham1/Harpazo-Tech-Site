@@ -13,6 +13,7 @@ const Button = ({
   const baseStyles = 'inline-flex items-center justify-center font-body font-bold rounded-btn transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2';
   
   const sizeStyles = {
+    xsm: 'py-2 px-2 text-xs',
     sm: 'py-2 px-4 text-sm',
     md: 'py-3 px-6 text-base',
     lg: 'py-4 px-8 text-lg',
@@ -22,6 +23,7 @@ const Button = ({
     primary: 'bg-accent-orange text-primary-blue hover:opacity-90 active:scale-95 focus:ring-accent-orange',
     secondary: 'bg-secondary-blue text-white hover:bg-opacity-90 active:scale-95 focus:ring-secondary-blue',
     outline: 'border-2 border-primary-blue text-primary-blue hover:bg-primary-blue hover:text-white active:scale-95 focus:ring-primary-blue',
+    gradient: 'btn-gradient-outline text-white hover:text-accent-orange active:scale-95 focus:ring-secondary-blue',
     ghost: 'text-primary-blue hover:bg-primary-blue/10 active:scale-95 focus:ring-primary-blue',
   };
 
