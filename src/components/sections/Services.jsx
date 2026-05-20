@@ -33,7 +33,7 @@ const services = [
       'Subtitles, motion graphics, and colour grading',
       'Turnaround in 48 hours',
     ],
-    proof: 'Crafted for the platforms your customers are on',
+    proof: 'Crafted for platforms your customers are on',
   },
   {
     icon: '📣',
@@ -63,7 +63,7 @@ const Services = () => {
         >
           {/* Eyebrow */}
           <motion.div variants={fadeUp} className="mb-4">
-            <span className="inline-block text-xs font-bold tracking-widest uppercase text-canvas-yellow bg-canvas-yellow/10 border border-canvas-yellow/20 rounded-full px-4 py-1.5">
+            <span className="inline-block text-xs font-bold tracking-widest uppercase text-accent-orange bg-accent-orange/10 border border-accent-orange/20 rounded-full px-4 py-1.5">
               What We Do
             </span>
           </motion.div>
@@ -112,7 +112,7 @@ const Services = () => {
           </p>
           <a
             href="#contact"
-            className="text-sm font-bold text-canvas-yellow hover:text-white underline underline-offset-4 transition-colors duration-200"
+            className="text-sm font-bold text-accent-orange hover:text-white underline underline-offset-4 transition-colors duration-200"
           >
             Let's talk and figure it out →
           </a>

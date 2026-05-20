@@ -33,8 +33,23 @@ const SmoothScroll = ({ children }) => {
 
     requestAnimationFrame(raf);
 
+    // Intercept anchor links for smooth scrolling
+    const handleClick = (e) => {
+      const target = e.target.closest('a[href^="#"]');
+      if (target) {
+        const id = target.getAttribute('href');
+        if (id && id !== '#') {
+          e.preventDefault();
+          lenis.scrollTo(id, { offset: -80 }); // -80px to account for the sticky header
+        }
+      }
+    };
+
+    document.addEventListener('click', handleClick);
+
     // Cleanup on unmount
     return () => {
+      document.removeEventListener('click', handleClick);
       lenis.destroy();
     };
   }, []);

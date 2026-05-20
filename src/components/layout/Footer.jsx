@@ -35,6 +35,7 @@ const Footer = () => {
               <Heading level={4} className="font-semibold text-lg">Company</Heading>
               <ul className="flex flex-col gap-2 text-white/70 text-sm">
                 <li><a href="#testimonials" className="hover:text-accent-orange transition-colors">Testimonials</a></li>
+                <li><a href="#services" className="hover:text-accent-orange transition-colors">Services</a></li>
                 <li><a href="#contact" className="hover:text-accent-orange transition-colors">Contact</a></li>
               </ul>
             </div>
@@ -50,8 +51,8 @@ const Footer = () => {
         >
           <p>&copy; {new Date().getFullYear()} Harpazo Tech. All rights reserved.</p>
           <div className="flex gap-6">
-            <a href="#" className="hover:text-white transition-colors">Privacy Policy</a>
-            <a href="#" className="hover:text-white transition-colors">Terms of Service</a>
+            <a href="/privacy" className="hover:text-white transition-colors">Privacy Policy</a>
+            <a href="/terms" className="hover:text-white transition-colors">Terms of Service</a>
           </div>
         </motion.div>
       </div>

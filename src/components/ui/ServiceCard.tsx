@@ -68,7 +68,7 @@ const ServiceCard = ({
 
       {/* Proof badge at the bottom */}
       <div className="inline-flex items-center gap-1.5 self-start bg-white/5 border border-white/10 rounded-full px-3 py-1">
-        <span className="w-1.5 h-1.5 rounded-full bg-green-500 flex-shrink-0" />
+        <span className="w-1.5 h-1.5 rounded-full bg-accent-orange flex-shrink-0" />
         <span className="text-[11px] font-semibold text-white/70 tracking-wide">
           {proof}
         </span>

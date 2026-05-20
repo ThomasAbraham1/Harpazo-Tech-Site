@@ -84,7 +84,7 @@ export default function ClientsAndTestimonials() {
         {
             name: "John Harrigan",
             brandName: "Harrigan Academy",
-            image: "/assets/Harrigan.png",
+            image: "/assets/John.png",
             brandLogo: '/assets/brandLogos/Harrigan Academy.png',
             rating: 5,
             review: "Transitioning our curriculum into a custom digital space required a robust, user-friendly platform, and Thomas delivered exactly that.\nHis attention to the student journey and deep understanding of full-stack architecture made the Academy's launch a massive success.\nHe doesn't just write code; he engineers comprehensive solutions. I highly recommend him for complex, data-heavy builds.",
@@ -94,7 +94,7 @@ export default function ClientsAndTestimonials() {
         {
             name: "Amanpreet",
             brandName: "Tryfecta Management",
-            image: "/assets/Amanpreet.png",
+            image: "/assets/Tryfecta.png",
             rating: 5,
             brandLogo: '/assets/brandLogos/Tryfecta Management.png',
             review: "Partnering with TechScepter was a pivotal step for our firm's growth. We needed a digital presence that communicated authority, efficiency, and trust.\nThomas engineered a sleek, highly functional corporate site that streamlined our client intake process while looking incredibly sophisticated.\nHis professionalism, strategic thinking, and flawless execution set him apart from anyone else we've worked with.",
