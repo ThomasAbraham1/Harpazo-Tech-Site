@@ -18,7 +18,6 @@ interface brandContent {
 export default function ClientsAndTestimonials() {
     const [activeIndex, setActiveIndex] = useState(0)
     const [isHovered, setIsHovered] = useState(false)
-    const [inView, setInView] = useState(false)
     const sectionRef = useRef<HTMLDivElement>(null)
 
     // The Parent handles the staggering
@@ -64,8 +63,8 @@ export default function ClientsAndTestimonials() {
         {
             name: "Jun Aoki ",
             brandName: "Aoki Works",
-            image: "/assets/Jun.png",
-            brandLogo: '/assets/brandLogos/Aoki Works.png',
+            image: "/assets/Jun.webp",
+            brandLogo: '/assets/brandLogos/Aoki Works.webp',
             rating: 5,
             review: "Working with Thomas on my website was a smooth and positive experience.\nHe understood the vision behind the brand, maintained high professionalism, and delivered clean, well-structured work within a reasonable timeline.\nHe was responsive to feedback and proactive with suggestions, which made the final outcome both functional and aligned with what I had in mind.",
             myNoteTitle: "What Makes This Special: Jun's Website - A Calm, Artistic Haven",
@@ -74,9 +73,9 @@ export default function ClientsAndTestimonials() {
         {
             name: "Sanjay",
             brandName: "Redtin Studio",
-            image: "/assets/Sanjay.png",
+            image: "/assets/Sanjay.webp",
             rating: 5,
-            brandLogo: "/assets/brandLogos/Redtin Studio.png",
+            brandLogo: "/assets/brandLogos/Redtin Studio.webp",
             review: "Thomas brought a level of technical polish and aesthetic precision to the Redtin Studio site that completely elevated our digital presence.\nHe perfectly captured our bold, minimalist visual identity while ensuring the site's performance remained incredibly fast and responsive.\nHis eye for modern design and clean code made the entire collaboration effortless and highly rewarding.",
             myNoteTitle: "What Makes This Special: Redtin Studio - A Bold Digital Canvas",
             myNoteBody: "Redtin Studio's platform is a testament to striking, functional minimalism. By utilizing heavy negative space and fluid, high-end animations, the site acts as a dynamic stage for their creative portfolio without ever overshadowing the work itself.",
@@ -84,8 +83,8 @@ export default function ClientsAndTestimonials() {
         {
             name: "John Harrigan",
             brandName: "Harrigan Academy",
-            image: "/assets/John.png",
-            brandLogo: '/assets/brandLogos/Harrigan Academy.png',
+            image: "/assets/John.webp",
+            brandLogo: '/assets/brandLogos/Harrigan Academy.webp',
             rating: 5,
             review: "Transitioning our curriculum into a custom digital space required a robust, user-friendly platform, and Thomas delivered exactly that.\nHis attention to the student journey and deep understanding of full-stack architecture made the Academy's launch a massive success.\nHe doesn't just write code; he engineers comprehensive solutions. I highly recommend him for complex, data-heavy builds.",
             myNoteTitle: "What Makes This Special: Harrigan Academy - Where Structure Meets Elegance",
@@ -94,9 +93,9 @@ export default function ClientsAndTestimonials() {
         {
             name: "Amanpreet",
             brandName: "Tryfecta Management",
-            image: "/assets/Tryfecta.png",
+            image: "/assets/Tryfecta.webp",
             rating: 5,
-            brandLogo: '/assets/brandLogos/Tryfecta Management.png',
+            brandLogo: '/assets/brandLogos/Tryfecta Management.webp',
             review: "Partnering with TechScepter was a pivotal step for our firm's growth. We needed a digital presence that communicated authority, efficiency, and trust.\nThomas engineered a sleek, highly functional corporate site that streamlined our client intake process while looking incredibly sophisticated.\nHis professionalism, strategic thinking, and flawless execution set him apart from anyone else we've worked with.",
             myNoteTitle: "What Makes This Special: Tryfecta Management - The Architecture of Trust",
             myNoteBody: "For Tryfecta Management, the goal was to exude quiet authority and a subtle, dark luxury aesthetic. We implemented a refined, monochromatic UI paired with seamless backend integrations, proving that high-level corporate websites can be both exceptionally powerful and beautiful.",
@@ -113,48 +112,30 @@ export default function ClientsAndTestimonials() {
         return () => clearInterval(timer)
     }, [isHovered, content.length])
 
-    // IntersectionObserver to show/hide mobile arrows only while section is in view
-    useEffect(() => {
-        const el = sectionRef.current
-        if (!el) return
-        const observer = new IntersectionObserver(
-            ([entry]) => setInView(entry.isIntersecting),
-            { threshold: 0.1 }
-        )
-        observer.observe(el)
-        return () => observer.disconnect()
-    }, [])
+
 
     const prev = () => setActiveIndex((p) => (p === 0 ? content.length - 1 : p - 1))
     const next = () => setActiveIndex((p) => (p === content.length - 1 ? 0 : p + 1))
 
     return (
-        <Section id="testimonials" ref={sectionRef} className="bg-[radial-gradient(circle_at_top_left,_#2A629A_10%,_#003285_90%)] w-full">
-            {/* Fixed arrows — only visible on mobile/tablet when section is in view */}
-            <AnimatePresence>
-                {inView && (
-                    <motion.div
-                        className="fixed bottom-6 left-0 right-0 z-50 flex justify-between px-4 lg:hidden pointer-events-none"
-                        initial={{ opacity: 0, y: 20 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        exit={{ opacity: 0, y: 20 }}
-                        transition={{ duration: 0.3 }}
+        <Section id="testimonials" ref={sectionRef} className="relative bg-[radial-gradient(circle_at_top_left,_#2A629A_10%,_#003285_90%)] w-full">
+            {/* Bounded Sticky Arrows — they stick to the screen but only within this section */}
+            <div className="absolute inset-0 z-50 pointer-events-none lg:hidden flex flex-col justify-end pb-8">
+                <div className="sticky bottom-6 flex justify-between px-2 w-full">
+                    <button
+                        onClick={prev}
+                        className="pointer-events-auto bg-primary-blue/90 backdrop-blur-md p-3 rounded-full border border-white/20 text-white shadow-2xl active:scale-95 transition-transform"
                     >
-                        <button
-                            onClick={prev}
-                            className="pointer-events-auto bg-primary-blue/90 backdrop-blur-md p-4 rounded-full border border-white/20 text-white shadow-2xl active:scale-95 transition-transform"
-                        >
-                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M15 18l-6-6 6-6" /></svg>
-                        </button>
-                        <button
-                            onClick={next}
-                            className="pointer-events-auto bg-primary-blue/90 backdrop-blur-md p-4 rounded-full border border-white/20 text-white shadow-2xl active:scale-95 transition-transform"
-                        >
-                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M9 18l6-6-6-6" /></svg>
-                        </button>
-                    </motion.div>
-                )}
-            </AnimatePresence>
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M15 18l-6-6 6-6" /></svg>
+                    </button>
+                    <button
+                        onClick={next}
+                        className="pointer-events-auto bg-primary-blue/90 backdrop-blur-md p-3 rounded-full border border-white/20 text-white shadow-2xl active:scale-95 transition-transform"
+                    >
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M9 18l6-6-6-6" /></svg>
+                    </button>
+                </div>
+            </div>
 
             {/* Section: top padding, NO bottom padding — card bleeds to edge */}
             <div ref={sectionRef} className="px-4 pt-8 lg:pt-12 pb-0">

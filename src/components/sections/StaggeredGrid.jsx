@@ -42,19 +42,19 @@ const StaggeredGrid = () => {
     const textSpan = "flex-shrink-0 flex flex-col items-start justify-end px-6 pb-6 lg:px-8 lg:pb-10 w-48 md:w-56 lg:w-60 rounded-2xl bg-accent-orange text-white font-bold";
 
     const row1 = [
-        { src: "https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?auto=format&fit=crop&w=600&q=80", span: "col-span-2 row-span-1" },
+        { src: "/assets/staggered/image-1.webp", span: "col-span-2 row-span-1" },
         { text: '14 Days', subText: 'Website Launch', span: textSpan },
-        { src: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=600&q=80", span: "col-span-1 row-span-1" },
+        { src: "/assets/staggered/image-2.webp", span: "col-span-1 row-span-1" },
         { text: '48 hrs', subText: 'Video Turnaround', span: textSpan },
-        { src: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=600&q=80", span: "col-span-2 row-span-1" },
+        { src: "/assets/staggered/image-3.webp", span: "col-span-2 row-span-1" },
         { text: '4.8x ROAS', subText: 'Ad Campaigns That Work', span: textSpan },
     ];
     const row2 = [
-        { src: "https://images.unsplash.com/photo-1581291518633-83b4ebd1d83e?auto=format&fit=crop&w=600&q=80", span: "col-span-1 row-span-1" },
+        { src: "/assets/staggered/image-4.webp", span: "col-span-1 row-span-1" },
         { text: '1,000+', subText: 'Conversations Generated', span: textSpan },
-        { src: "https://images.unsplash.com/photo-1601506521937-0121a7fc2a6b?auto=format&fit=crop&w=600&q=80", span: "col-span-1 row-span-1" },
+        { src: "/assets/staggered/image-5.webp", span: "col-span-1 row-span-1" },
         { text: '3x Traffic', subText: '98 Performance Score', span: textSpan },
-        { src: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=600&q=80", span: "col-span-2 row-span-1" },
+        { src: "/assets/staggered/image-6.webp", span: "col-span-2 row-span-1" },
         { text: '100%', subText: 'Custom. No Templates.', span: textSpan },
     ];
     // { src: "https://plus.unsplash.com/premium_photo-1683910767532-3a25b821f7ae?q=80&w=808&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", span: "col-span-1 row-span-1" },
