@@ -5,18 +5,25 @@ import Services from '../components/sections/Services';
 import ServicesNew from '../components/sections/ServicesNew';
 import StatBar from '../components/sections/StatBar';
 import SmoothScroll from '../components/layout/SmoothScroll';
+import StaggeredGrid from '../components/sections/StaggeredGrid';
+import ClientsAndTestimonials from '../components/sections/ClientsAndTestimonials';
+import Contact from '../components/sections/Contact';
+import Footer from '../components/layout/Footer';
 
 const Home = () => {
   return (
     <SmoothScroll>
-      <main className="min-h-screen bg-white">
+      <main>
         <Header />
         <Hero />
         <StatBar />
         <Services />
-        <ServicesNew />
-        {/* Future sections: Featured Work, Contact */}
+        {/* <ServicesNew /> */}
+        <StaggeredGrid />
+        <ClientsAndTestimonials />
+        <Contact />
       </main>
+      <Footer />
     </SmoothScroll>
   );
 };

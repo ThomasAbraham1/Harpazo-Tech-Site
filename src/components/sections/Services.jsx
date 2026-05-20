@@ -4,6 +4,11 @@ import Section from '../ui/Section';
 import Container from '../ui/Container';
 import ServiceCard from '../ui/ServiceCard';
 import { fadeUp, staggerContainer } from '../../lib/animations';
+import { Heading, Text } from '../ui/Typography';
+
+
+
+
 
 const services = [
   {
@@ -46,7 +51,7 @@ const services = [
 
 const Services = () => {
   return (
-    <Section variant="dark" padding="lg" id="services" className="relative">
+    <Section variant="darkSecondary" padding="lg" id="services" className="relative">
       <Container className="relative z-10">
         {/* Section Header */}
         <motion.div
@@ -65,16 +70,16 @@ const Services = () => {
 
           {/* Heading */}
           <motion.div variants={fadeUp}>
-            <h2 className="font-heading font-bold text-white text-3xl md:text-4xl lg:text-5xl tracking-tight mb-5 max-w-2xl">
+            <Heading level={2} className="text-white mb-5 max-w-2xl">
               Three ways we grow your business online
-            </h2>
+            </Heading>
           </motion.div>
 
           {/* Subtext */}
           <motion.div variants={fadeUp}>
-            <p className="text-white/60 text-lg max-w-xl leading-relaxed">
+            <Text size="lg" className="text-white/60 max-w-xl">
               Pick one. Pick all three. We'll figure out what you actually need.
-            </p>
+            </Text>
           </motion.div>
         </motion.div>
 
@@ -84,10 +89,10 @@ const Services = () => {
             // Re-order entry: Middle (1) -> Left (0) -> Right (2)
             const delayOrder = i === 1 ? 0 : i === 0 ? 1 : 2;
             return (
-              <ServiceCard 
-                key={service.label} 
-                {...service} 
-                delay={delayOrder * 0.1} 
+              <ServiceCard
+                key={service.label}
+                {...service}
+                delay={delayOrder * 0.1}
                 isFeatured={i === 1}
               />
             );

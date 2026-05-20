@@ -16,9 +16,10 @@ const Header = () => {
   }, []);
 
   const navLinks = [
-    { name: 'Solutions', href: '#' },
-    { name: 'About Us', href: '#' },
-    { name: 'Resources', href: '#' },
+    { name: 'Services', href: '#services' },
+    { name: 'Testimonials', href: '#testimonials' },
+    // { name: 'About Us', href: '#' },
+    // { name: 'Resources', href: '#' },
   ];
 
   return (
@@ -51,12 +52,11 @@ const Header = () => {
           </ul>
           <div className="hidden lg:block w-px h-6 bg-gray-300"></div>
           <div className="hidden lg:flex gap-3">
-            <Button variant={isScrolled ? 'ghost' : 'outline'} size="sm" className={!isScrolled ? 'border-white text-white hover:bg-white hover:text-primary-blue' : ''}>
-              Log In
-            </Button>
-            <Button variant="primary" size="sm">
-              Get Started
-            </Button>
+            <a href="#contact">
+              <Button variant="primary" size="sm">
+                Contact Us
+              </Button>
+            </a>
           </div>
         </nav>
 
@@ -94,8 +94,9 @@ const Header = () => {
               </nav>
               <div className="h-px w-full bg-gray-100 my-2"></div>
               <div className="flex flex-col gap-3">
-                <Button variant="outline" fullWidth onClick={() => setMobileMenuOpen(false)}>Log In</Button>
-                <Button variant="primary" fullWidth onClick={() => setMobileMenuOpen(false)}>Get Started</Button>
+                <a href="#contact" className="w-full" onClick={() => setMobileMenuOpen(false)}>
+                  <Button variant="primary" fullWidth>Contact Us</Button>
+                </a>
               </div>
             </div>
           </motion.div>

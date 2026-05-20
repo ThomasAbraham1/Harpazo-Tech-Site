@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import React, { useState, useEffect, useRef } from 'react';
+import { motion, AnimatePresence, useInView } from 'framer-motion';
 import Button from './Button';
 import { Heading, Text } from './Typography';
 
@@ -23,14 +23,26 @@ const accordionData = [
 
 export default function WebsiteAccordion() {
   // Store the ID of the currently open accordion item. Null means all are closed.
-  const [openId, setOpenId] = useState(accordionData[0].id);
+  const [openId, setOpenId] = useState(null);
+  const containerRef = useRef(null);
+  const isInView = useInView(containerRef, { once: true, amount: 0.3 });
+
+  useEffect(() => {
+    if (isInView) {
+      // Small delay to coordinate with the staggered grid on the right
+      const timer = setTimeout(() => {
+        setOpenId(accordionData[0].id);
+      }, 200);
+      return () => clearTimeout(timer);
+    }
+  }, [isInView]);
 
   const toggleItem = (id) => {
     setOpenId((currentId) => (currentId === id ? null : id));
   };
 
   return (
-    <div className="w-full max-w-2xl space-y-4">
+    <div ref={containerRef} className="w-full max-w-2xl space-y-4">
       {accordionData.map((item) => {
         const isOpen = openId === item.id;
 
@@ -49,7 +61,7 @@ export default function WebsiteAccordion() {
 
               <motion.div
                 // animate={{ rotate: isOpen ? 45 : 0 }}
-                transition={{ duration: 0.3, ease: [0.4, 0, 0.2, 1] }}
+                transition={{ duration: 5.0, ease: [0.4, 0, 0.2, 1] }}
                 className="flex items-center justify-center w-10 h-10 rounded-lg border-2 border-white/10 p-2  text-white/40 mx-2"
               >
                 {/* SVG Plus Icon */}
@@ -78,8 +90,8 @@ export default function WebsiteAccordion() {
                   animate={{ height: "auto", opacity: 1 }}
                   exit={{ height: 0, opacity: 0 }}
                   transition={{
-                    height: { duration: 0.4, ease: [0.4, 0, 0.2, 1] },
-                    opacity: { duration: 0.25, delay: 0.1 }
+                    height: { duration: 0.8, ease: [0.4, 0, 0.2, 1] },
+                    opacity: { duration: 0.8, delay: 0.1 }
                   }}
                   className="w-0 min-w-full"
                 >

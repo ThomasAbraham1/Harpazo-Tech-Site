@@ -64,8 +64,6 @@ const Hero = () => {
       {/* Dynamic Background Gradient */}
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_bottom_right,_#2A629A_30%,_#003285_70%)] opacity-100 z-0" />
 
-      {/* Grain Texture Overlay */}
-      <div className="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-20 z-0 mix-blend-overlay" />
 
       {/* Content Container */}
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full flex-1 flex flex-col items-center">

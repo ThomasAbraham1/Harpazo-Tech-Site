@@ -7,7 +7,12 @@
     @apply font-body text-primary-blue bg-white antialiased;
   }
 
-  h1, h2, h3, h4, h5, h6 {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
     @apply font-heading font-bold text-primary-blue tracking-tight;
   }
 }
@@ -23,7 +28,8 @@
     content: '';
     position: absolute;
     inset: 0;
-    padding: 1px; /* Border weight */
+    padding: 1px;
+    /* Border weight */
     border-radius: inherit;
     background: linear-gradient(to bottom right, #94a3b8, #003285);
     -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
@@ -39,4 +45,16 @@
     opacity: 0.8;
   }
 
+  /* Hide scrollbar for Chrome, Safari and Opera */
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* Hide scrollbar for IE, Edge and Firefox */
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+    /* Firefox */
+  }
 }

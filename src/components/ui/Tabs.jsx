@@ -39,7 +39,7 @@ const Tabs = ({ tabs, activeTab, onChange, className = "" }) => {
   };
 
   return (
-    <div className={`flex space-x-2 bg-none p-1 rounded-xl w-max  ${className}`}>
+    <div className={`flex space-x-2 bg-none p-1 rounded-xl w-full overflow-x-auto snap-x snap-mandatory md:justify-center justify-start scrollbar-hide ${className}`}>
       {tabs.map((tab, idx) => {
         const isActive = idx === activeIdx;
 
@@ -47,7 +47,7 @@ const Tabs = ({ tabs, activeTab, onChange, className = "" }) => {
           <button
             key={tab}
             onClick={() => handleTabClick(idx)}
-            className="group relative px-8 md:px-16 py-3 text-sm font-bold text-white border-2 border-white/10 rounded-xl outline-none overflow-hidden cursor-pointer overflow-hidden"
+            className="flex relative px-15 md:px-16 py-3 text-sm font-bold text-white border-2 border-white/10 rounded-xl outline-none overflow-hidden cursor-pointer justify-center"  
           >
             <AnimatePresence custom={direction} initial={false}>
               {isActive && (

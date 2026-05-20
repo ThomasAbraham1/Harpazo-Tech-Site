@@ -20,7 +20,7 @@ const Divider = ({
     );
   }
 
-  return <hr className={`border-t border-gray-200 my-4 w-full ${className}`} {...props} />;
+  return <hr className={`border-t border-gray-200 w-full ${className}`} {...props} />;
 };
 
 export default Divider;

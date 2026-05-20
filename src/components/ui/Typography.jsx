@@ -8,7 +8,7 @@ export const Heading = ({
   ...props
 }) => {
   const Tag = `h${level}`;
-  
+
   const baseStyles = 'font-heading font-bold text-primary-blue tracking-tight';
   const sizeStyles = {
     1: 'text-4xl md:text-5xl lg:text-6xl',
@@ -20,7 +20,7 @@ export const Heading = ({
   };
 
   const gradientStyles = gradient ? 'bg-clip-text text-transparent bg-gradient-to-r from-primary-blue to-secondary-blue' : '';
-  
+
   const classes = `${baseStyles} ${sizeStyles[level]} ${gradientStyles} ${className}`;
 
   return (
@@ -37,13 +37,14 @@ export const Text = ({
   className = '',
   ...props
 }) => {
-  const baseStyles = 'font-body font-light text-primary-blue leading-relaxed';
+  const baseStyles = 'font-body font-light leading-relaxed';
   const sizeStyles = {
-    xs: 'text-[8px]',
+    xs: 'text-[10px]',
     sm: 'text-sm',
     base: 'text-base',
     lg: 'text-lg',
     xl: 'text-xl',
+    xxl: 'text-5xl',
   };
 
   const colorStyle = subtle ? 'opacity-70' : '';

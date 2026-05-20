@@ -23,12 +23,12 @@ const ServiceCard = ({
 }: ServiceCardProps) => {
   return (
     <motion.div
-      initial={{ opacity: 0, y: 50 }}
-      whileInView={{ opacity: 1, y: 0 }}
+      initial={{ opacity: 0, y: 50, scale: 0.9 }}
+      whileInView={{ opacity: 1, y: 0, scale: 1 }}
       viewport={{ once: true, margin: '-60px' }}
-      transition={{ duration: 0.6, delay, ease: 'easeOut' }}
+      transition={{ duration: 0.8, delay, ease: 'easeOut' }}
       // whileHover={{ y: -6, transition: { duration: 0.25 } }}
-      className={`group relative flex flex-col p-8 rounded-2xl bg-none/5 backdrop-blur-md border ${isFeatured ? 'border-secondary-blue/100 shadow-[0_0_60px_rgba(42,98,154,1)] z-10' : 'border-white/10 z-0'
+      className={`transform-gpu will-change-transform group relative flex flex-col p-8 rounded-2xl bg-white/[0.03] border ${isFeatured ? 'border-secondary-blue/70 shadow-[0_0_40px_rgba(42,98,154,0.3)] z-10' : 'border-white/10 z-0'
         } isolate overflow-visible`}
     >
       {/* Subtle top accent bar — animated on hover */}

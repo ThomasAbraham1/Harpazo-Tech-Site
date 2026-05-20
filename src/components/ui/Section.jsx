@@ -19,6 +19,7 @@ const Section = ({
     muted: 'bg-canvas-yellow/20', // subtle yellow tint
     highlight: 'bg-canvas-yellow',
     dark: 'bg-primary-blue text-white',
+    darkSecondary:'text-white bg-gradient-to-b from-primary-blue to-secondary-blue',
     darker: 'bg-slate-950 text-white',
   };
 
