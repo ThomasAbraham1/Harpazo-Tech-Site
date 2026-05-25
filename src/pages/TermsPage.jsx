@@ -52,7 +52,9 @@ const TermsOfService = () => {
 
             <Heading level={3}>7. Contact Information</Heading>
             <Text>
-              If you have any questions about these Terms, please contact us through our website.
+              If you have any questions about these Terms, please contact us at:<br /><br />
+              Email: <a href="mailto:thomas@harpazotech.com" className="text-blue-600 hover:underline">thomas@harpazotech.com</a><br />
+              Phone: <a href="tel:9385341273" className="text-blue-600 hover:underline">9385341273</a>
             </Text>
           </div>
         </main>

@@ -32,12 +32,12 @@ const Header = () => {
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center">
         {/* Logo */}
-        <div className="flex items-center gap-0">
+        <a href="/" className="flex items-center gap-0">
           <img src="/logo.png" alt="Harpazo Tech Logo" className="w-8 h-8 object-contain" />
           <div className={`font-heading font-bold text-2xl tracking-tight transition-colors ${isScrolled ? 'text-primary-blue' : 'text-white'}`}>
             arpazo Tech
           </div>
-        </div>
+        </a>
 
         {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center gap-8">
