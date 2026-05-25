@@ -22,21 +22,28 @@ const Footer = () => {
             </Text>
           </div>
           
-          <div className="flex flex-col md:flex-row gap-12 md:gap-24 text-center md:text-left">
+          <div className="flex flex-col md:flex-row gap-12 md:gap-16 lg:gap-24 text-center md:text-left">
             <div className="flex flex-col gap-4">
               <Heading level={4} className="font-semibold text-lg">Services</Heading>
               <ul className="flex flex-col gap-2 text-white/70 text-sm">
-                <li><a href="#services" className="hover:text-accent-orange transition-colors">Web Development</a></li>
-                <li><a href="#services" className="hover:text-accent-orange transition-colors">Video Editing</a></li>
-                <li><a href="#services" className="hover:text-accent-orange transition-colors">Ad Campaigns</a></li>
+                <li><a href="/#services" className="hover:text-accent-orange transition-colors">Web Development</a></li>
+                <li><a href="/#services" className="hover:text-accent-orange transition-colors">Video Editing</a></li>
+                <li><a href="/#services" className="hover:text-accent-orange transition-colors">Ad Campaigns</a></li>
               </ul>
             </div>
             <div className="flex flex-col gap-4">
               <Heading level={4} className="font-semibold text-lg">Company</Heading>
               <ul className="flex flex-col gap-2 text-white/70 text-sm">
-                <li><a href="#testimonials" className="hover:text-accent-orange transition-colors">Testimonials</a></li>
-                <li><a href="#services" className="hover:text-accent-orange transition-colors">Services</a></li>
-                <li><a href="#contact" className="hover:text-accent-orange transition-colors">Contact</a></li>
+                <li><a href="/#testimonials" className="hover:text-accent-orange transition-colors">Testimonials</a></li>
+                <li><a href="/#services" className="hover:text-accent-orange transition-colors">Services</a></li>
+                <li><a href="/#contact" className="hover:text-accent-orange transition-colors">Contact</a></li>
+              </ul>
+            </div>
+            <div className="flex flex-col gap-4">
+              <Heading level={4} className="font-semibold text-lg">Contact Us</Heading>
+              <ul className="flex flex-col gap-2 text-white/70 text-sm">
+                <li><a href="mailto:thomas@harpazotech.com" className="hover:text-accent-orange transition-colors">thomas@harpazotech.com</a></li>
+                <li><a href="tel:9385341273" className="hover:text-accent-orange transition-colors">9385341273</a></li>
               </ul>
             </div>
           </div>
