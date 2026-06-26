@@ -98,15 +98,15 @@ Update this file as content evolves. Use it as the single source of truth before
 
 ## About Us Page
 
-- **Heading:** High-End Delivery Without the Agency Overhead.
+- **Heading:** Hi, I'm Thomas. Here's why I started Harpazo Tech.
 - **Body:**
-  > At Harpazo Tech, we build websites, manage ads, and create content for businesses that want to grow online — without paying traditional agency prices.
+  > I build websites, manage ads, and create content for businesses that want to grow online — without paying agency prices for agency overhead.
   >
-  > We operate on a modular agency model. Instead of a bloated in-house team, we leverage a trusted network of specialized partners and top-tier tools. This allows us to scale precisely according to your project's demands, keeping our overhead low and your costs efficient.
+  > I've built [4] websites for real businesses and managed ad campaigns that generated real conversations. Harpazo Tech is how I'm scaling that — with a small, focused team that actually cares about your results.
   >
-  > Agile team. Direct access to our core strategists. No unnecessary account managers between you and your results.
+  > Small team. Direct access to me. No account managers between you and your results.
 
-- **Photo direction:** Clean, professional team or collaborative workspace setting. Not a massive corporate stock photo, but an agile, focused vibe.
+- **Photo direction:** Small, clean, candid founder photo. Desk or laptop setting. Not a corporate headshot.
 
 ---
 
