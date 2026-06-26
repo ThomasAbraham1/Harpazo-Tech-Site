@@ -66,19 +66,9 @@ export default function ClientsAndTestimonials() {
             image: "/assets/Jun.webp",
             brandLogo: '/assets/brandLogos/Aoki Works.webp',
             rating: 5,
-            review: "Working with Thomas on my website was a smooth and positive experience.\nHe understood the vision behind the brand, maintained high professionalism, and delivered clean, well-structured work within a reasonable timeline.\nHe was responsive to feedback and proactive with suggestions, which made the final outcome both functional and aligned with what I had in mind.",
-            myNoteTitle: "What Makes This Special: Jun's Website - A Calm, Artistic Haven",
+            review: "Working with Harpazo Tech on my website was a smooth and positive experience.\nTheir team understood the vision behind the brand, maintained high professionalism, and delivered clean, well-structured work within a reasonable timeline.\nThey were responsive to feedback and proactive with suggestions, which made the final outcome both functional and aligned with what I had in mind.",
+            myNoteTitle: "Client Feedback for Harpazo Tech Projects: Jun's Website - A Calm, Artistic Haven",
             myNoteBody: "Jun's website is a masterclass in understated elegance. By day, Aoki Works is a calm, meditative retreat for deep-sea divers, but by night",
-        },
-        {
-            name: "Sanjay",
-            brandName: "Redtin Studio",
-            image: "/assets/Sanjay.webp",
-            rating: 5,
-            brandLogo: "/assets/brandLogos/Redtin Studio.webp",
-            review: "Thomas brought a level of technical polish and aesthetic precision to the Redtin Studio site that completely elevated our digital presence.\nHe perfectly captured our bold, minimalist visual identity while ensuring the site's performance remained incredibly fast and responsive.\nHis eye for modern design and clean code made the entire collaboration effortless and highly rewarding.",
-            myNoteTitle: "What Makes This Special: Redtin Studio - A Bold Digital Canvas",
-            myNoteBody: "Redtin Studio's platform is a testament to striking, functional minimalism. By utilizing heavy negative space and fluid, high-end animations, the site acts as a dynamic stage for their creative portfolio without ever overshadowing the work itself.",
         },
         {
             name: "John Harrigan",
@@ -86,8 +76,8 @@ export default function ClientsAndTestimonials() {
             image: "/assets/John.webp",
             brandLogo: '/assets/brandLogos/Harrigan Academy.webp',
             rating: 5,
-            review: "Transitioning our curriculum into a custom digital space required a robust, user-friendly platform, and Thomas delivered exactly that.\nHis attention to the student journey and deep understanding of full-stack architecture made the Academy's launch a massive success.\nHe doesn't just write code; he engineers comprehensive solutions. I highly recommend him for complex, data-heavy builds.",
-            myNoteTitle: "What Makes This Special: Harrigan Academy - Where Structure Meets Elegance",
+            review: "Transitioning our curriculum into a custom digital space required a robust, user-friendly platform, and Harpazo Tech delivered exactly that.\nTheir attention to the student journey and deep understanding of full-stack architecture made the Academy's launch a massive success.\nThey don't just write code; they engineer comprehensive solutions. I highly recommend them for complex, data-heavy builds.",
+            myNoteTitle: "Client Feedback for Harpazo Tech Projects: Harrigan Academy - Where Structure Meets Elegance",
             myNoteBody: "Harrigan Academy required a delicate balance between complex data architecture and an intuitive, premium user interface. We focused on stripping away digital clutter, resulting in an immersive, distraction-free environment that genuinely elevates the e-learning experience.",
         },
         {
@@ -96,8 +86,8 @@ export default function ClientsAndTestimonials() {
             image: "/assets/Tryfecta.webp",
             rating: 5,
             brandLogo: '/assets/brandLogos/Tryfecta Management.webp',
-            review: "Partnering with TechScepter was a pivotal step for our firm's growth. We needed a digital presence that communicated authority, efficiency, and trust.\nThomas engineered a sleek, highly functional corporate site that streamlined our client intake process while looking incredibly sophisticated.\nHis professionalism, strategic thinking, and flawless execution set him apart from anyone else we've worked with.",
-            myNoteTitle: "What Makes This Special: Tryfecta Management - The Architecture of Trust",
+            review: "Partnering with Harpazo Tech was a pivotal step for our firm's growth. We needed a digital presence that communicated authority, efficiency, and trust.\nTheir team engineered a sleek, highly functional corporate site that streamlined our client intake process while looking incredibly sophisticated.\nTheir professionalism, strategic thinking, and flawless execution set them apart from anyone else we've worked with.",
+            myNoteTitle: "Client Feedback for Harpazo Tech Projects: Tryfecta Management - The Architecture of Trust",
             myNoteBody: "For Tryfecta Management, the goal was to exude quiet authority and a subtle, dark luxury aesthetic. We implemented a refined, monochromatic UI paired with seamless backend integrations, proving that high-level corporate websites can be both exceptionally powerful and beautiful.",
         },
     ]
@@ -255,7 +245,7 @@ export default function ClientsAndTestimonials() {
                                         <motion.button
                                             key={item.brandName}
                                             onClick={() => setActiveIndex(index)}
-                                            className={`w-14 h-14 border-1 rounded-full overflow-hidden flex-shrink-0 ${index == 2 ? "bg-[#904BA2]" : "bg-white"} p-2 ${activeIndex === index ? "border-accent-orange" : "border-white"}`}
+                                            className={`w-14 h-14 border-1 rounded-full overflow-hidden flex-shrink-0 ${index == 1 ? "bg-[#904BA2]" : "bg-white"} p-2 ${activeIndex === index ? "border-accent-orange" : "border-white"}`}
                                         >
                                             <motion.img src={item.brandLogo} className=""></motion.img>
                                         </motion.button>
