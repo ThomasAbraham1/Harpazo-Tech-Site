@@ -59,7 +59,7 @@ const PrivacyPolicy = () => {
             <Heading level={3}>8. Contact Us</Heading>
             <Text>
               If you have any questions about this Privacy Policy, the practices of this site, or your dealings with this site, please contact us at:<br /><br />
-              Email: <a href="mailto:hello@harpazotech.com" className="text-blue-600 hover:underline">hello@harpazotech.com</a><br />
+              Email: <a href="mailto:thomas@harpazotech.com" className="text-blue-600 hover:underline">thomas@harpazotech.com</a><br />
               Phone: <a href="tel:9385341273" className="text-blue-600 hover:underline">9385341273</a>
             </Text>
           </div>

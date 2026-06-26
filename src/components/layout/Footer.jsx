@@ -42,7 +42,7 @@ const Footer = () => {
             <div className="flex flex-col gap-4">
               <Heading level={4} className="font-semibold text-lg">Contact Us</Heading>
               <ul className="flex flex-col gap-2 text-white/70 text-sm">
-                <li><a href="mailto:hello@harpazotech.com" className="hover:text-accent-orange transition-colors">hello@harpazotech.com</a></li>
+                <li><a href="mailto:thomas@harpazotech.com" className="hover:text-accent-orange transition-colors">thomas@harpazotech.com</a></li>
                 <li><a href="tel:9385341273" className="hover:text-accent-orange transition-colors">9385341273</a></li>
               </ul>
             </div>
